@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Real-Time 3D Graphics with WebGL2</title>
+    <style type="text/css">
+      canvas {
+        border: 5px dotted blue;
+      }
+    </style>
+    <script type="text/javascript">
+      'use strict'
+
+      function init () {
+        const canvas = document.getElementById("webgl-canvas")
+        if(!canvas) {
+          console.error('Error')
+          return
+        }
+        const gl = canvas.getContext('webgl2')
+        const message = gl ? 'You get WebGL2' : 'Sorry!'
+        alert(message)
+      }
+      window.onload = init
+    </script>
+  </head>
+  <body>
+    <canvas id="webgl-canvas" width="800" height="600">
+      You Browser dose not support the HTML5 canvas elements
+    </canvas>
+  </body>
+</html>
